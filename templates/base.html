@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>portfolio@nived</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body class="p-4 m-4 flex flex-col min-h-screen">
+    <section>
+      <h1>
+        <span class="text-purple">portfolio</span>
+        <span class="text-orange">@</span>
+        <span class="text-red">nived</span>
+      </h1>
+      <ul class="flex space-x-4 list-none pt-4">
+        <li>
+          <a href="/">home</a>
+        </li>
+        <li>
+          <a href="{{ get_url(path='@/projects/_index.md') }}">projects</a>
+        </li>
+        <li>
+          <a href="{{ get_url(path='@/blog/_index.md') }}">blogs</a>
+        </li>
+        <li>
+          <a href="/resume/NIVED_S_MOHAN_RESUME.pdf">résumé</a>
+        </li>
+      </ul>
+      <div class="pt-12">{% block content %} {% endblock content %}</div>
+    </section>
+  </body>
+</html>
