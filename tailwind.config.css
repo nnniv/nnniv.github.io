@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @font-face {
   font-family: IBMPlexMono;
   font-style: normal;
@@ -58,24 +57,28 @@
 
 @layer utilities {
   body {
-      @apply text-light font-ibm bg-night;
+    @apply text-light font-ibm bg-night;
   }
   h1 {
-      @apply text-2xl font-bold text-purple;
+    @apply text-2xl font-bold text-purple sm:text-4xl;
   }
   h2 {
-      @apply text-xl text-yellow;
+    @apply text-xl text-yellow sm:text-2xl;
   }
   h3 {
-      @apply text-lg text-orange;
+    @apply text-lg text-orange sm:text-4xl;
   }
   h4 {
-      @apply text-base text-orange;
+    @apply text-base text-orange sm:text-2xl;
   }
   a {
-      @apply text-blue no-underline;
+    @apply text-blue no-underline;
   }
   a:hover {
-      @apply text-blue underline;
+    @apply text-blue underline;
+  }
+  ul {
+    @apply sm:text-lg;
+    
   }
 }
