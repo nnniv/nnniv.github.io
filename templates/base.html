@@ -7,27 +7,31 @@
   </head>
 
   <body class="p-4 m-4 flex flex-col">
-    <section>
-      <h1>
-        <span class="text-purple">portfolio</span>
-        <span class="text-orange">@</span>
-        <span class="text-red">nived</span>
-      </h1>
-      <ul class="flex space-x-4 list-none pt-4">
-        <li>
-          <a href="/">home</a>
-        </li>
-        <li>
-          <a href="{{ get_url(path='@/projects/_index.md') }}">projects</a>
-        </li>
-        <li>
-          <a href="{{ get_url(path='@/blog/_index.md') }}">blogs</a>
-        </li>
-        <li>
-          <a href="/resume/NIVED_S_MOHAN_RESUME.pdf">résumé</a>
-        </li>
-      </ul>
-      <div class="pt-12">{% block content %} {% endblock content %}</div>
-    </section>
+    <h3>
+      <span class="text-purple">portfolio</span>
+      <span class="text-orange">@</span>
+      <span class="text-red">nived</span>
+    </h3>
+    <ul class="flex space-x-4 list-none pt-4">
+      <li>
+        <a href="/"><span class="text-red">0:</span>home</a>
+      </li>
+      <li>
+        <a href="{{ get_url(path='@/projects/_index.md') }}"
+          ><span class="text-red">1:</span>projects</a
+        >
+      </li>
+      <li>
+        <a href="{{ get_url(path='@/blog/_index.md') }}"
+          ><span class="text-red">2:</span>blogs</a
+        >
+      </li>
+      <li>
+        <a href="/resume/NIVED_S_MOHAN_RESUME.pdf"
+          ><span class="text-red">3:</span>résumé</a
+        >
+      </li>
+    </ul>
+    <div class="pt-12">{% block content %} {% endblock content %}</div>
   </body>
 </html>

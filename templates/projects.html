@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% block content %}
-<h1 id="title">{{ section.title }}</h1>
+<h2 id="title">{{ section.title }}</h2>
 <ul>
   {% for page in section.pages %}
   <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
