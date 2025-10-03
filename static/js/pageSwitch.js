@@ -1,20 +1,25 @@
 document.addEventListener("keydown", function (e) {
   if (e.key >= "0" && e.key <= "9") {
+    const go = (url) =>
+      typeof window.navigateWithFade === "function"
+        ? window.navigateWithFade(url)
+        : (window.location.href = url);
+
     switch (e.key) {
       case "0":
-        window.location.href = "/";
+        go("/");
         break;
 
       case "1":
-        window.location.href = "/projects";
+        go("/projects");
         break;
 
       case "2":
-        window.location.href = "/blog";
+        go("/blog");
         break;
 
       case "3":
-        window.location.href = "/resume/NIVED_S_MOHAN_RESUME.pdf";
+        go("/resume/NIVED_S_MOHAN_RESUME.pdf");
         break;
     }
   }
