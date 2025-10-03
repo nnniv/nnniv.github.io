@@ -6,54 +6,63 @@
   font-weight: 700;
   src: url("/fonts/Lilex-Bold.ttf");
 }
+
 @font-face {
   font-family: "Lilex";
   font-style: italic;
   font-weight: 700;
   src: url("/fonts/Lilex-BoldItalic.ttf");
 }
+
 @font-face {
   font-family: "Lilex";
   font-style: normal;
   font-weight: 200;
   src: url("/fonts/Lilex-ExtraLight.ttf");
 }
+
 @font-face {
   font-family: "Lilex";
   font-style: italic;
   font-weight: 200;
   src: url("/fonts/Lilex-ExtraLightItalic.ttf");
 }
+
 @font-face {
   font-family: "Lilex";
   font-style: italic;
   font-weight: 400;
   src: url("/fonts/Lilex-Italic.ttf");
 }
+
 @font-face {
   font-family: "Lilex";
   font-style: normal;
   font-weight: 500;
   src: url("/fonts/Lilex-Medium.ttf");
 }
+
 @font-face {
   font-family: "Lilex";
   font-style: italic;
   font-weight: 500;
   src: url("/fonts/Lilex-MediumItalic.ttf");
 }
+
 @font-face {
   font-family: "Lilex";
   font-style: normal;
   font-weight: 400;
   src: url("/fonts/Lilex-Regular.ttf");
 }
+
 @font-face {
   font-family: "Lilex";
   font-style: normal;
   font-weight: 100;
   src: url("/fonts/Lilex-Thin.ttf");
 }
+
 @font-face {
   font-family: "Lilex";
   font-style: italic;
@@ -78,30 +87,48 @@
   body {
     @apply text-light font-lilex bg-night;
   }
+
+  p {
+    @apply text-purple;
+  }
+
   h1 {
-    @apply text-5xl;
+    @apply text-5xl text-red pb-4;
   }
+
   h2 {
-    @apply text-4xl;
+    @apply text-4xl text-orange;
+    ;
   }
+
   h3 {
-    @apply text-3xl;
+    @apply text-3xl text-blue;
   }
+
   h4 {
-    @apply text-2xl;
+    @apply text-2xl text-green;
   }
+
   h5 {
-    @apply text-xl;
+    @apply text-xl text-yellow;
   }
-  h5 {
-    @apply text-lg;
+
+  h6 {
+    @apply text-lg text-orange;
   }
+
   a {
-    @apply text-purple no-underline;
+    @apply text-purple;
   }
+
   a:hover {
-    @apply text-blue underline;
+    @apply underline;
   }
+
+  strong {
+    @apply text-purple;
+  }
+
   /* ul { */
   /*   @apply sm:text-lg; */
   /* } */

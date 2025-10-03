@@ -1,74 +1,88 @@
 {% extends "base.html" %} {% block content %}
 <div>
-  <div
-    class="flex flex-col items-center space-y-6 p-4 md:flex-row md:items-start md:space-x-6 md:space-y-0"
-  >
-    <img src="/assets/cat.svg" alt="cat pfp" class="w-72 h-auto" />
-    <div class="flex flex-col justify-center text-left mx-auto max-w-xs md:mx-0 md:max-w-none md:text-left">
-      <h6 class="mb-2 text-purple">
-        <span class="text-red">></span> fetch
-      </h6>
+  <div id="page-transition" class="flex flex-row items-center space-x-10">
+    <img src="/assets/cat.svg" alt="cat pfp" class="w-72" />
+    <div class="flex flex-col justify-center">
+      <h6 class="mb-2 text-purple"><span class="text-red">></span> fetch</h6>
       <ul class="text-purple">
         <li><span class="text-red">name:</span> nived s mohan</li>
-        <li><span class="text-red">edu:</span> cs@mitblr</li>
-        <li><span class="text-red">exp:</span> ex-backend dev @ adc@mitblr</li>
         <li>
-          <span class="text-red">gh:</span> 
-          <a href="https://github.com/NNNiv" class="inline-flex items-center space-x-1">
+          <span class="text-red">edu:</span> cs
+          <span class="text-orange">@</span> mitblr
+        </li>
+        <li>
+          <span class="text-red">exp:</span> ex-backend dev
+          <span class="text-orange">@</span> adc-mitblr
+        </li>
+        <li>
+          <span class="text-red">gh:</span>
+          <a
+            href="https://github.com/NNNiv"
+            class="inline-flex items-center space-x-1"
+          >
             <span>nnniv</span>
             <img src="/assets/hyperlink.svg" alt="hyperlink" class="w-3" />
           </a>
         </li>
         <li>
-          <span class="text-red">lnkdin:</span> 
-          <a href="https://www.linkedin.com/in/nived-s-mohan" class="inline-flex items-center space-x-1">
-            <span>@nived-s-mohan</span>
+          <span class="text-red">lnkdin:</span>
+          <a
+            href="https://www.linkedin.com/in/nived-s-mohan"
+            class="inline-flex items-center space-x-1"
+          >
+            <span>nived-s-mohan</span>
             <img src="/assets/hyperlink.svg" alt="hyperlink" class="w-3" />
           </a>
         </li>
         <li>
-          <span class="text-red">mailto:</span> 
-          <a href="mailto:nivroh2016@gmail.com" class="inline-flex items-center space-x-1">
+          <span class="text-red">mailto:</span>
+          <a
+            href="mailto:nivroh2016@gmail.com"
+            class="inline-flex items-center space-x-1"
+          >
             <span>nivroh2016@gmail.com</span>
             <img src="/assets/hyperlink.svg" alt="hyperlink" class="w-3" />
           </a>
         </li>
         <li>
           <span class="text-red">twt:</span>
-          <a href="https://x.com/nivedtwt" class="inline-flex items-center space-x-1">
+          <a
+            href="https://x.com/nivedtwt"
+            class="inline-flex items-center space-x-1"
+          >
             <span>@nivedtwt</span>
             <img src="/assets/hyperlink.svg" alt="hyperlink" class="w-3" />
           </a>
         </li>
-      <div class="flex pt-2 space-x-1">
-        <div class="w-6 h-6 bg-light"></div>
-        <div class="w-6 h-6 bg-night"></div>
-        <div class="w-6 h-6 bg-purple"></div>
-        <div class="w-6 h-6 bg-red"></div>
-        <div class="w-6 h-6 bg-blue"></div>
-        <div class="w-6 h-6 bg-green"></div>
-        <div class="w-6 h-6 bg-yellow"></div>
-        <div class="w-6 h-6 bg-orange"></div>
-      </div>
+        <div class="flex pt-2 space-x-1">
+          <!-- <div class="w-6 h-6 bg-light"></div> -->
+          <div class="w-6 h-6 bg-purple"></div>
+          <div class="w-6 h-6 bg-orange"></div>
+          <div class="w-6 h-6 bg-red"></div>
+          <!-- <div class="w-6 h-6 bg-blue"></div> -->
+          <!-- <div class="w-6 h-6 bg-green"></div> -->
+          <!-- <div class="w-6 h-6 bg-yellow"></div> -->
+        </div>
       </ul>
-      </p>
     </div>
   </div>
-  <div class="w-3/4">
-    <h4 class="text-orange">tools</h4>
-    <h6 class="pt-2 text-purple">
-      <span class="text-red">languages: </span> go, python, js, lua, java, c, postgresql, html, css, rust
-    </h6>
-    <h6 class="pt-2 text-purple">
-      <span class="text-red">frameworks:</span> tailwind css, sanic, react native (expo), templ
-    </h6>
-    <h6 class="pt-2 text-purple">
-      <span class="text-red">developer tools: </span> git, linux, neovim, shell, docker, vscode, pycharm, intellij, eclipse
-      </h6>
-    <h6 class="pt-2 text-purple">
-      <span class="text-red">libraries: </span> redis, echo, htmx, react, bubble tea, statplotlib, statsmodel
-    </h6>
+  <div>
+    <h6 class="pt-12">recent posts</h6>
   </div>
+  <!-- <div class="w-3/4"> -->
+  <!--   <h4 class="text-orange">tools</h4> -->
+  <!--   <h6 class="pt-2 text-purple"> -->
+  <!--     <span class="text-red">languages: </span> go, python, js, lua, java, c, postgresql, html, css, rust -->
+  <!--   </h6> -->
+  <!--   <h6 class="pt-2 text-purple"> -->
+  <!--     <span class="text-red">frameworks:</span> tailwind css, sanic, react native (expo), templ -->
+  <!--   </h6> -->
+  <!--   <h6 class="pt-2 text-purple"> -->
+  <!--     <span class="text-red">developer tools: </span> git, linux, neovim, shell, docker, vscode, pycharm, intellij, eclipse -->
+  <!--     </h6> -->
+  <!--   <h6 class="pt-2 text-purple"> -->
+  <!--     <span class="text-red">libraries: </span> redis, echo, htmx, react, bubble tea, statplotlib, statsmodel -->
+  <!--   </h6> -->
+  <!-- </div> -->
 </div>
 {% endblock content %}
-

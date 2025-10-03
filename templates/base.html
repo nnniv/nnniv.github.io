@@ -4,34 +4,71 @@
     <meta charset="utf-8" />
     <title>portfolio@nived</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/assets/cat.svg" />
   </head>
 
-  <body class="p-4 m-4 flex flex-col">
-    <h3>
-      <span class="text-purple">portfolio</span>
-      <span class="text-orange">@</span>
-      <span class="text-red">nived</span>
-    </h3>
-    <ul class="flex space-x-4 list-none pt-4">
-      <li>
-        <a href="/"><span class="text-red">0:</span>home</a>
-      </li>
-      <li>
-        <a href="{{ get_url(path='@/projects/_index.md') }}"
-          ><span class="text-red">1:</span>projects</a
-        >
-      </li>
-      <li>
-        <a href="{{ get_url(path='@/blog/_index.md') }}"
-          ><span class="text-red">2:</span>blogs</a
-        >
-      </li>
-      <li>
-        <a href="/resume/NIVED_S_MOHAN_RESUME.pdf"
-          ><span class="text-red">3:</span>résumé</a
-        >
-      </li>
-    </ul>
-    <div class="pt-12">{% block content %} {% endblock content %}</div>
+  <body class="flex items-center justify-center">
+    <div class="p-4 m-4 flex flex-col items-center justify-center w-1/2">
+      <h3>
+        <span class="text-purple">portfolio</span>
+        <span class="text-orange">@</span>
+        <span class="text-red">nived</span>
+      </h3>
+      <ul class="flex space-x-4 list-none pt-4">
+        <li>
+          <a href="/"><span class="text-red">0:</span>home</a>
+        </li>
+        <li>
+          <a href="{{ get_url(path='@/projects/_index.md') }}"
+            ><span class="text-red">1:</span>projects</a
+          >
+        </li>
+        <li>
+          <a href="{{ get_url(path='@/blog/_index.md') }}"
+            ><span class="text-red">2:</span>blogs</a
+          >
+        </li>
+        <li>
+          <a href="/resume/NIVED_S_MOHAN_RESUME.pdf"
+            ><span class="text-red">3:</span>résumé</a
+          >
+        </li>
+      </ul>
+      <div class="pt-12">{% block content %} {% endblock content %}</div>
+    </div>
   </body>
+  <!-- <script> -->
+  <!--   document.addEventListener("DOMContentLoaded", () => { -->
+  <!--     const overlay = document.getElementById("page-transition"); -->
+  <!---->
+  <!--     setTimeout(() => { -->
+  <!--       overlay.classList.add("opacity-0", "backdrop-blur-0"); -->
+  <!--       overlay.classList.add("pointer-events-none"); -->
+  <!--     }, 100); -->
+  <!---->
+  <!--     document.querySelectorAll("a[href]").forEach((link) => { -->
+  <!--       link.addEventListener("click", (e) => { -->
+  <!--         const url = link.getAttribute("href"); -->
+  <!---->
+  <!--         if ( -->
+  <!--           !url || -->
+  <!--           url.startsWith("http") || -->
+  <!--           url.startsWith("#") || -->
+  <!--           url.startsWith("javascript:") -->
+  <!--         ) -->
+  <!--           return; -->
+  <!---->
+  <!--         e.preventDefault(); -->
+  <!---->
+  <!--         overlay.classList.remove("opacity-0", "backdrop-blur-0"); -->
+  <!--         overlay.classList.add("opacity-100", "backdrop-blur-lg"); -->
+  <!--         overlay.classList.remove("pointer-events-none"); -->
+  <!---->
+  <!--         setTimeout(() => { -->
+  <!--           window.location.href = url; -->
+  <!--         }, 500); -->
+  <!--       }); -->
+  <!--     }); -->
+  <!--   }); -->
+  <!-- </script> -->
 </html>
