@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -36,39 +36,7 @@
       </ul>
       <div class="pt-12">{% block content %} {% endblock content %}</div>
     </div>
+    <script src="/js/pageIndicator.js"></script>
   </body>
-  <!-- <script> -->
-  <!--   document.addEventListener("DOMContentLoaded", () => { -->
-  <!--     const overlay = document.getElementById("page-transition"); -->
-  <!---->
-  <!--     setTimeout(() => { -->
-  <!--       overlay.classList.add("opacity-0", "backdrop-blur-0"); -->
-  <!--       overlay.classList.add("pointer-events-none"); -->
-  <!--     }, 100); -->
-  <!---->
-  <!--     document.querySelectorAll("a[href]").forEach((link) => { -->
-  <!--       link.addEventListener("click", (e) => { -->
-  <!--         const url = link.getAttribute("href"); -->
-  <!---->
-  <!--         if ( -->
-  <!--           !url || -->
-  <!--           url.startsWith("http") || -->
-  <!--           url.startsWith("#") || -->
-  <!--           url.startsWith("javascript:") -->
-  <!--         ) -->
-  <!--           return; -->
-  <!---->
-  <!--         e.preventDefault(); -->
-  <!---->
-  <!--         overlay.classList.remove("opacity-0", "backdrop-blur-0"); -->
-  <!--         overlay.classList.add("opacity-100", "backdrop-blur-lg"); -->
-  <!--         overlay.classList.remove("pointer-events-none"); -->
-  <!---->
-  <!--         setTimeout(() => { -->
-  <!--           window.location.href = url; -->
-  <!--         }, 500); -->
-  <!--       }); -->
-  <!--     }); -->
-  <!--   }); -->
-  <!-- </script> -->
+  <script src="/js/pageSwitch.js"></script>
 </html>

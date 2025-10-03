@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
 <div>
   <h6 id="title">{{ section.title }}</h6>
-  <ul class="pt-2 text-lg>
+  <ul class="pt-2 text-lg">
     {% for page in section.pages %}
     <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
     {% endfor %}
