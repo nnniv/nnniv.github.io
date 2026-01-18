@@ -88,6 +88,11 @@
     @apply text-light font-lilex bg-night;
   }
 
+  /* Responsive images everywhere */
+  img {
+    @apply max-w-full h-auto;
+  }
+
   p {
     @apply text-purple;
   }
@@ -98,7 +103,6 @@
 
   h2 {
     @apply text-4xl text-orange;
-    ;
   }
 
   h3 {
