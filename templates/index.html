@@ -1,10 +1,18 @@
 {% extends "base.html" %} {% block content %}
 <div>
-  <div class="flex flex-row items-start justify-center space-x-10 mx-auto">
-    <img src="/assets/cat.svg" alt="cat pfp" class="w-40 sm:w-56 md:w-72" />
-    <div class="flex flex-col items-start justify-start text-left">
+  <div
+    class="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-6 sm:gap-10 mx-auto w-full"
+  >
+    <img
+      src="/assets/cat.svg"
+      alt="cat pfp"
+      class="w-48 sm:w-56 md:w-72 max-w-full h-auto"
+    />
+    <div
+      class="flex min-w-0 w-full sm:w-auto flex-col items-start justify-start text-left"
+    >
       <h6 class="mb-2 text-purple"><span class="text-red">></span> fetch</h6>
-      <ul class="text-purple whitespace-nowrap overflow-x-auto text-left">
+      <ul class="text-purple sm:whitespace-nowrap text-left break-words">
         <li><span class="text-red">name:</span> nived s mohan</li>
         <li>
           <span class="text-red">edu:</span> cs
@@ -63,7 +71,7 @@
     </div>
   </div>
   <div
-    class="flex flex-row flex-nowrap space-x-4 md:space-x-10 items-center justify-center pt-10 whitespace-nowrap overflow-x-auto"
+    class="flex flex-row flex-nowrap space-x-4 md:space-x-10 items-center justify-center pt-10 whitespace-nowrap overflow-x-auto max-w-full"
   >
     <div class="flex flex-row space-x-3">
       <h6 class="text-purple">tat</h6>
