@@ -7,10 +7,10 @@ date = 2025-09-08
 Writing blogs is hard.
 #
 
-I used to write a lot for someone who used to mean to me a lot. 
+I used to write a lot for someone who used to mean a lot to me.
 #
 
-They even told me I should give writing seriously a shot once.
+Sigh...
 
 ## H2
 ### H3 
