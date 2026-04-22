@@ -1,0 +1,21 @@
+{% macro page_cards(pages, palette="red,green,blue,yellow,purple,orange") %}
+<ul class="mt-6 flex flex-col gap-6 text-left">
+  {% for page in pages %}
+  <li>
+    <a href="{{ page.permalink | safe }}" class="block">
+      <div class="flex items-center gap-4">
+        <h4>{{ page.title }}</h4>
+        <div
+          class="project-color-squares flex gap-2"
+          data-color-palette="{{ palette }}"
+          aria-hidden="true"
+        ></div>
+      </div>
+      {% if page.description %}
+      <p class="mt-2 text-sm">{{ page.description }}</p>
+      {% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endmacro page_cards %}

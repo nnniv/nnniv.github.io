@@ -21,42 +21,41 @@
     class="flex min-h-screen items-start justify-center overflow-x-hidden blur-md transition duration-300 will-change-[filter]"
   >
     <div
-      class="p-4 m-4 flex flex-col items-center w-full sm:w-5/6 md:w-2/3 lg:w-1/2 font-mono"
+      class="my-4 flex w-full max-w-full flex-col items-center px-4 font-mono md:w-2/3 lg:w-1/2"
     >
       <h3 class="whitespace-nowrap">
         <!-- <a href="/reading"><span class="text-purple"> </span></a> -->
         <span class="text-purple">Nived</span>
         <span class="text-red">Mohan</span>
       </h3>
-      <ul class="flex flex-nowrap overflow-x-auto space-x-4 list-none pt-4">
-        <li>
-          <a href="/"><span class="text-red">0:</span>Home</a>
-        </li>
-        <li>
-          <a href="{{ get_url(path='@/projects/_index.md') }}"
-            ><span class="text-red">1:</span>Projects</a
-          >
-        </li>
-        <li>
-          <a href="{{ get_url(path='@/blog/_index.md') }}"
-            ><span class="text-red">2:</span>Blogs</a
-          >
-        </li>
-        <li>
-          <a href="/resume/NIVED_S_MOHAN_RESUME.pdf"
-            ><span class="text-red">3:</span>Résumé</a
-          >
-        </li>
-      </ul>
-      <div class="pt-12 w-full text-center">
-        {% block content %} {% endblock content %} <body
-    id="app-root"
-    class="flex min-h-screen items-start justify-center overflow-x-hidden blur-md transition duration-300 will-change-[filter]"
-  >
+      <div class="w-full overflow-x-auto pt-4 max-[320px]:overflow-x-visible">
+        <ul class="mx-auto flex w-max flex-nowrap items-center gap-3 text-sm sm:gap-4 sm:text-base max-[320px]:grid max-[320px]:w-full max-[320px]:max-w-[18rem] max-[320px]:grid-cols-2 max-[320px]:justify-items-center max-[320px]:gap-x-4 max-[320px]:gap-y-2">
+          <li class="shrink-0 whitespace-nowrap">
+            <a href="/"><span class="text-red">0:</span>Home</a>
+          </li>
+          <li class="shrink-0 whitespace-nowrap">
+            <a href="{{ get_url(path='@/projects/_index.md') }}"
+              ><span class="text-red">1:</span>Projects</a
+            >
+          </li>
+          <li class="shrink-0 whitespace-nowrap">
+            <a href="{{ get_url(path='@/blog/_index.md') }}"
+              ><span class="text-red">2:</span>Blogs</a
+            >
+          </li>
+          <li class="shrink-0 whitespace-nowrap">
+            <a href="/resume/NIVED_S_MOHAN_RESUME.pdf"
+              ><span class="text-red">3:</span>Résumé</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="w-full pt-12">
+        {% block content %} {% endblock content %}
       </div>
     </div>
     <script src="/js/pageIndicator.js"></script>
     <script src="/js/transition.js"></script>
+    <script src="/js/pageSwitch.js"></script>
   </body>
-  <script src="/js/pageSwitch.js"></script>
 </html>

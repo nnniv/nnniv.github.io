@@ -1,12 +1,9 @@
-{% extends "base.html" %} {% block content %}
-<div>
-  <h6 id="title">{{ section.title }}</h6>
-  <ul class="pt-2 text-lg flex flex-wrap gap-x-4 justify-start">
-    {% for page in section.pages %}
-    <li>
-      <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-    </li>
-    {% endfor %}
-  </ul>
+{% extends "base.html" %}
+{% import "macros/content-cards.html" as content_cards %}
+{% block content %}
+<div class="w-full">
+  <h5 id="title">I have <span class="text-purple">never</span> made anything <span class="text-orange">substantial</span> ever.</h5>
+  {{ content_cards::page_cards(pages=section.pages) }}
 </div>
+<script src="/js/randomProjectColors.js"></script>
 {% endblock content %}
