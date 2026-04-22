@@ -1,166 +1,155 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Lilex";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/Lilex-Bold.ttf");
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/JetBrainsMono-NF/JetBrainsMonoNerdFont-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Lilex";
-  font-style: italic;
-  font-weight: 700;
-  src: url("/fonts/Lilex-BoldItalic.ttf");
+	font-family: "JetBrains Mono";
+	font-style: italic;
+	font-weight: 400;
+	src: url("/fonts/JetBrainsMono-NF/JetBrainsMonoNerdFont-Italic.ttf");
 }
 
 @font-face {
-  font-family: "Lilex";
-  font-style: normal;
-  font-weight: 200;
-  src: url("/fonts/Lilex-ExtraLight.ttf");
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: 500;
+	src: url("/fonts/JetBrainsMono-NF/JetBrainsMonoNerdFont-Medium.ttf");
 }
 
 @font-face {
-  font-family: "Lilex";
-  font-style: italic;
-  font-weight: 200;
-  src: url("/fonts/Lilex-ExtraLightItalic.ttf");
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: 600;
+	src: url("/fonts/JetBrainsMono-NF/JetBrainsMonoNerdFont-SemiBold.ttf");
 }
 
 @font-face {
-  font-family: "Lilex";
-  font-style: italic;
-  font-weight: 400;
-  src: url("/fonts/Lilex-Italic.ttf");
+	font-family: "Geist";
+	font-style: normal;
+	font-weight: 400;
+	src: url("/fonts/Geist/Geist-Regular.woff2");
 }
 
 @font-face {
-  font-family: "Lilex";
-  font-style: normal;
-  font-weight: 500;
-  src: url("/fonts/Lilex-Medium.ttf");
+	font-family: "Geist";
+	font-style: italic;
+	font-weight: 400;
+	src: url("/fonts/Geist/Geist-Italic.woff2");
 }
 
 @font-face {
-  font-family: "Lilex";
-  font-style: italic;
-  font-weight: 500;
-  src: url("/fonts/Lilex-MediumItalic.ttf");
+	font-family: "Geist";
+	font-style: normal;
+	font-weight: 500;
+	src: url("/fonts/Geist/Geist-Medium.woff2");
 }
 
 @font-face {
-  font-family: "Lilex";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/Lilex-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Lilex";
-  font-style: normal;
-  font-weight: 100;
-  src: url("/fonts/Lilex-Thin.ttf");
-}
-
-@font-face {
-  font-family: "Lilex";
-  font-style: italic;
-  font-weight: 100;
-  src: url("/fonts/Lilex-ThinItalic.ttf");
+	font-family: "Geist";
+	font-style: normal;
+	font-weight: 600;
+	src: url("/fonts/Geist/Geist-SemiBold.woff2");
 }
 
 @theme {
-  --color-light: #f0edec;
-  /* --color-night: #242839; */
-  --color-night: #1a1b2a;
-  --color-purple: #ab9df2;
-  --color-red: #ff6188;
-  --color-blue: #78dce8;
-  --color-green: #a9dc76;
-  --color-yellow: #ffd866;
-  --color-orange: #fc9867;
+	--font-sans: "Geist", system-ui, sans-serif;
+	--font-mono: "JetBrains Mono", monospace;
 
-  --font-lilex: "Lilex";
+	--color-light: #f0edec;
+	/* --color-night: #242839; */
+	--color-night: #1a1b2a;
+	--color-purple: #ab9df2;
+	--color-red: #ff6188;
+	--color-blue: #78dce8;
+	--color-green: #a9dc76;
+	--color-yellow: #ffd866;
+	--color-orange: #fc9867;
+
+	--font-lilex: "Lilex";
 }
 
 @layer utilities {
-  body {
-    @apply text-light font-lilex bg-night;
-  }
+	body {
+		@apply bg-night;
+	}
 
-  /* Responsive images everywhere */
-  img {
-    @apply max-w-full h-auto;
-  }
+	/* Responsive images everywhere */
+	img {
+		@apply max-w-full h-auto;
+	}
 
-  p {
-    @apply text-purple;
-  }
+	p {
+		@apply text-purple;
+	}
 
-  h1 {
-    @apply text-5xl text-red pb-4;
-  }
+	h1 {
+		@apply text-5xl text-red pb-4;
+	}
 
-  h2 {
-    @apply text-4xl text-orange;
-  }
+	h2 {
+		@apply text-4xl text-orange;
+	}
 
-  h3 {
-    @apply text-3xl text-blue;
-  }
+	h3 {
+		@apply text-3xl text-blue;
+	}
 
-  h4 {
-    @apply text-2xl text-green;
-  }
+	h4 {
+		@apply text-2xl text-green;
+	}
 
-  h5 {
-    @apply text-xl text-yellow;
-  }
+	h5 {
+		@apply text-xl text-yellow;
+	}
 
-  h6 {
-    @apply text-lg text-orange;
-  }
+	h6 {
+		@apply text-lg text-orange;
+	}
 
-  a {
-    @apply text-purple;
-  }
+	a {
+		@apply text-purple;
+	}
 
-  a:hover {
-    @apply underline;
-  }
+	a:hover {
+		@apply underline;
+	}
 
-  strong {
-    @apply text-purple;
-  }
+	strong {
+		@apply text-purple;
+	}
 
-  /* ul { */
-  /*   @apply sm:text-lg; */
-  /* } */
+	/* ul { */
+	/*   @apply sm:text-lg; */
+	/* } */
 }
 
 .swatch {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 500;
-  white-space: nowrap;
-  overflow: hidden;
-  cursor: pointer;
-  transition: width 0.35s cubic-bezier(0.34, 1.2, 0.64, 1);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 13px;
+	font-weight: 500;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: pointer;
+	transition: width 0.35s cubic-bezier(0.34, 1.2, 0.64, 1);
 }
 
 .swatch:hover {
-  width: 64px;
+	width: 64px;
 }
 
 .swatch span {
-  opacity: 0;
-  transition: opacity 0.2s ease 0.15s;
-  pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.2s ease 0.15s;
+	pointer-events: none;
 }
 
 .swatch:hover span {
-  opacity: 1;
+	opacity: 1;
 }
