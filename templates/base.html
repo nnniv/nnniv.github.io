@@ -14,6 +14,16 @@
 
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="icon" href="/assets/cat.svg" />
+    <style>
+      .mermaid .cluster-label,
+      .mermaid .cluster-label .nodeLabel,
+      .mermaid .cluster-label span,
+      .mermaid .cluster-label p,
+      .mermaid .cluster-label text {
+        color: var(--color-light) !important;
+        fill: var(--color-light) !important;
+      }
+    </style>
   </head>
 
   <body
@@ -57,5 +67,34 @@
     <script src="/js/pageIndicator.js"></script>
     <script src="/js/transition.js"></script>
     <script src="/js/pageSwitch.js"></script>
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    const rootStyles = getComputedStyle(document.documentElement);
+    const colorLight = rootStyles.getPropertyValue('--color-light');
+    const colorPurple = rootStyles.getPropertyValue('--color-purple');
+    const colorNightLighter = "#242839"; // Yeah don't ask me, I be writing some bullshit
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        lineColor: colorPurple,
+        clusterBkg: colorNightLighter,
+        clusterTextColor: colorLight,
+      },
+      themeCSS: `
+        .cluster .nodeLabel,
+        .cluster .label text,
+        .cluster .label span,
+        .cluster-label,
+        .cluster-label .nodeLabel,
+        .cluster-label text,
+        .cluster-label span,
+        .cluster-label p {
+          fill: ${colorLight} !important;
+          color: ${colorLight} !important;
+        }
+      `,
+    });
+    </script>
   </body>
 </html>

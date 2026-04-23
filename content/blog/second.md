@@ -1,6 +1,6 @@
 +++
-title = "Writing blogs is hard."
-description = "Why do you think I haven't started writing yet?"
+title = "Second blog."
+description = "More placeholder for now."
 date = 2025-09-08
 +++
 
