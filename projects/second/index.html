@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Nived Mohan</title>
+
+    <link rel="preload" href="/css/styles.css" as="style" />
+    <link rel="preload" href="/fonts/Geist/Geist-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/JetBrainsMono-NF/JetBrainsMonoNerdFont-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="prefetch" href="/projects/" />
+    <link rel="prefetch" href="/blog/" />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/assets/cat.svg" />
+    <style>
+      .mermaid .cluster-label,
+      .mermaid .cluster-label .nodeLabel,
+      .mermaid .cluster-label span,
+      .mermaid .cluster-label p,
+      .mermaid .cluster-label text {
+        color: var(--color-light) !important;
+        fill: var(--color-light) !important;
+      }
+    </style>
+  </head>
+
+  <body
+    id="app-root"
+    class="flex min-h-screen items-start justify-center overflow-x-hidden blur-md transition duration-300 will-change-[filter]"
+  >
+    <div
+      class="my-4 flex w-full max-w-full flex-col items-center px-4 font-mono md:w-2/3 lg:w-1/2"
+    >
+      <h3 class="whitespace-nowrap">
+        <!-- <a href="/reading"><span class="text-purple"> </span></a> -->
+        <span class="text-purple">Nived</span>
+        <span class="text-red">Mohan</span>
+      </h3>
+      <div class="w-full overflow-x-auto pt-4 max-[320px]:overflow-x-visible">
+        <ul class="mx-auto flex w-max flex-nowrap items-center gap-3 text-sm sm:gap-4 sm:text-base max-[320px]:grid max-[320px]:w-full max-[320px]:max-w-[18rem] max-[320px]:grid-cols-2 max-[320px]:justify-items-center max-[320px]:gap-x-4 max-[320px]:gap-y-2">
+          <li class="shrink-0 whitespace-nowrap">
+            <a href="/"><span class="text-red">0:</span>Home</a>
+          </li>
+          <li class="shrink-0 whitespace-nowrap">
+            <a href="https://nnniv.github.io/projects/"
+              ><span class="text-red">1:</span>Projects</a
+            >
+          </li>
+          <li class="shrink-0 whitespace-nowrap">
+            <a href="https://nnniv.github.io/blog/"
+              ><span class="text-red">2:</span>Blogs</a
+            >
+          </li>
+          <li class="shrink-0 whitespace-nowrap">
+            <a href="/resume/NIVED_S_MOHAN_RESUME.pdf"
+              ><span class="text-red">3:</span>Résumé</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="w-full pt-12">
+        
+<h1 id="title">Demo Project 2</h1>
+<p id="subtitle" class="text-orange">2026-04-22</p>
+<div class="text-left font-sans text-light">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<h1 id=""></h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</div>
+
+      </div>
+    </div>
+    <script src="/js/pageIndicator.js"></script>
+    <script src="/js/transition.js"></script>
+    <script src="/js/pageSwitch.js"></script>
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    const rootStyles = getComputedStyle(document.documentElement);
+    const colorLight = rootStyles.getPropertyValue('--color-light');
+    const colorPurple = rootStyles.getPropertyValue('--color-purple');
+    const colorNightLighter = "#242839"; // Yeah don't ask me, I be writing some bullshit
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        lineColor: colorPurple,
+        clusterBkg: colorNightLighter,
+        clusterTextColor: colorLight,
+      },
+      themeCSS: `
+        .cluster .nodeLabel,
+        .cluster .label text,
+        .cluster .label span,
+        .cluster-label,
+        .cluster-label .nodeLabel,
+        .cluster-label text,
+        .cluster-label span,
+        .cluster-label p {
+          fill: ${colorLight} !important;
+          color: ${colorLight} !important;
+        }
+      `,
+    });
+    </script>
+  </body>
+</html>
