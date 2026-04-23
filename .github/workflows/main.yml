@@ -1,18 +1,41 @@
 name: Zola on GitHub Pages
+on:
+  push:
+    branches:
+      - main
 
-on: 
- push:
-  branches:
-   - main
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
-    name: Publish site
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout main
-      uses: actions/checkout@v4
-    - name: Build and deploy
-      uses: shalzz/zola-deploy-action@v0.21.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Zola
+        uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.19.2
+      
+      - name: Build
+        run: zola build
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
