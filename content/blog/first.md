@@ -6,7 +6,7 @@ date = 2025-09-08
 
 Writing blogs is hard.
 
-Below is a block of code.
+Below is a block of `code`.
 
 ```js
 console.log("hello");
